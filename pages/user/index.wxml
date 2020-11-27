@@ -3,10 +3,11 @@
   <view class="header" v-bind:class="{'status':isH5Plus}">
     <view class="userinfo">
       <view class="face">
-        <image class="img" src="../../common/images/avator.jpg"></image>
+        <image class="img" src="../../common/images/avator.png"></image>
       </view>
       <view class="info">登录/注册</view>
     </view>
+    <image class="img_ld" src="../../common/images/others/lingdang.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
   </view>
   <view class="orders"></view>
   <view class="user-links">
@@ -41,12 +42,26 @@
       <view class="title">售后服务</view>
     </view>
   </view>
-  <van-cell-group class="user-group">
-    <van-cell icon="records" title="全部订单" is-link />
-  </van-cell-group>
-  <van-cell-group>
-    <van-cell icon="points" title="我的积分" is-link />
-    <van-cell icon="gold-coin-o" title="我的优惠券" is-link />
-    <van-cell icon="gift-o" title="我收到的礼物" is-link />
-  </van-cell-group>
+  <swiper class="swiper_content" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <view class="swiper-item">
+          <image class="img" src="{{item}}" mode="aspectFill" lazy-load="false" binderror="" bindload=""></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <image class="img2" src="https://i.loli.net/2020/11/27/zhKSmGyjLFkbqvJ.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+  <view class="buyTitle">我的服务</view>
+  <view class="serve_content">
+    <view class="border_item" wx:for="{{serveList}}" wx:key="*this">
+      <view class="icon iconfont {{item.icon}}"></view>
+      <view class="txt">{{item.title}}</view>
+    </view>
+  </view>
+  <view class="buyTitle">
+    我是导购
+    <van-icon name="arrow" />
+  </view>
+  <image class="img2" src="https://i.loli.net/2020/11/27/haX4VUexjJrmp9B.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
 </view>
