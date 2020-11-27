@@ -1,10 +1,48 @@
 {
-    "pages": ["pages/index/index","pages/cart/index", "pages/goods/index", "pages/user/index"],
+    "pages": ["pages/home/index", "pages/cart/index", "pages/category/index", "pages/find/index", "pages/goods/index", "pages/user/index"],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
-        "navigationBarTextStyle": "black"
+        "navigationBarBackgroundColor": "#454c5c",
+        "navigationBarTitleText": "影儿商城",
+        "navigationBarTextStyle": "white"
     },
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "color": "#454c5c",
+        "selectedColor": "#c0943a",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/home/index",
+                "iconPath": "common/images/tabbar/home.png",
+                "selectedIconPath": "common/images/tabbar/home-current.png",
+                "text": "商城"
+            },
+            {
+                "pagePath": "pages/category/index",
+                "iconPath": "common/images/tabbar/category.png",
+                "selectedIconPath": "common/images/tabbar/category-current.png",
+                "text": "分类"
+            },
+            {
+                "pagePath": "pages/find/index",
+                "iconPath": "common/images/tabbar/find.png",
+                "selectedIconPath": "common/images/tabbar/find-current.png",
+                "text": "发现"
+            },
+            {
+                "pagePath": "pages/cart/index",
+                "iconPath": "common/images/tabbar/cart.png",
+                "selectedIconPath": "common/images/tabbar/cart-current.png",
+                "text": "购物车"
+            },
+            {
+                "pagePath": "pages/user/index",
+                "iconPath": "common/images/tabbar/user.png",
+                "selectedIconPath": "common/images/tabbar/user-current.png",
+                "text": "用户"
+            }
+        ]
+    }
 }

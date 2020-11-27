@@ -1,28 +1,49 @@
 <view>
-  <image class="user-poster" src="{{ 'https://img.yzcdn.cn/public_files/2017/10/23/8690bb321356070e0b8c4404d087f8fd.png' }}"></image>
-  <van-row class="user-links">
-    <van-col span="6">
-      <van-icon name="pending-payment" />
-      待付款
-    </van-col>
-    <van-col span="6">
-      <van-icon name="records" />
-      待接单
-    </van-col>
-    <van-col span="6">
-      <van-icon name="tosend" />
-      待发货
-    </van-col>
-    <van-col span="6">
-      <van-icon name="logistics" />
-      已发货
-    </van-col>
-  </van-row>
-
+  <!-- <image class="user-poster" src="{{ 'https://img.yzcdn.cn/public_files/2017/10/23/8690bb321356070e0b8c4404d087f8fd.png' }}"></image> -->
+  <view class="header" v-bind:class="{'status':isH5Plus}">
+    <view class="userinfo">
+      <view class="face">
+        <image class="img" src="../../common/images/avator.jpg"></image>
+      </view>
+      <view class="info">登录/注册</view>
+    </view>
+  </view>
+  <view class="orders"></view>
+  <view class="user-links">
+    <view class="tab_item">
+      <view class="icon_bg">
+        <van-icon class="icon" name="pending-payment" />
+      </view>
+      <view class="title">全部订单</view>
+    </view>
+    <view class="tab_item">
+      <view class="icon_bg">
+        <van-icon class="icon" name="records" />
+      </view>
+      <view class="title">待付款</view>
+    </view>
+    <view class="tab_item">
+      <view class="icon_bg">
+        <van-icon class="icon" name="tosend" />
+      </view>
+      <view class="title">待发货</view>
+    </view>
+    <view class="tab_item">
+      <view class="icon_bg">
+        <van-icon class="icon" name="logistics" />
+      </view>
+      <view class="title">待收货</view>
+    </view>
+    <view class="tab_item">
+      <view class="icon_bg">
+        <van-icon class="icon" name="logistics" />
+      </view>
+      <view class="title">售后服务</view>
+    </view>
+  </view>
   <van-cell-group class="user-group">
     <van-cell icon="records" title="全部订单" is-link />
   </van-cell-group>
-
   <van-cell-group>
     <van-cell icon="points" title="我的积分" is-link />
     <van-cell icon="gold-coin-o" title="我的优惠券" is-link />
