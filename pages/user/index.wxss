@@ -56,12 +56,6 @@
     margin-top: -1upx;
 }
 
-.user-poster {
-    width: 100%;
-    height: 53vw;
-    display: block;
-}
-
 .user-links {
     padding: 15px 0;
     font-size: 12px;
