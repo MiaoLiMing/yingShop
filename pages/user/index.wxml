@@ -1,5 +1,5 @@
-<view>
-  <view class="header" v-bind:class="{'status':isH5Plus}">
+<view class="users">
+  <view class="top_header" v-bind:class="{'status':isH5Plus}">
     <view class="userinfo">
       <view class="face">
         <image class="img" src="../../common/images/avator.png"></image>
@@ -63,4 +63,16 @@
     <van-icon name="arrow" />
   </view>
   <image class="img2" src="https://i.loli.net/2020/11/27/haX4VUexjJrmp9B.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+  <scroll-view scroll-x class="bg-white nav">
+    <view class="flex text-center">
+      <view class="cu-item flex-sub {{index==TabCur?'text-bold':''}}" wx:for="{{tabList}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+        {{item.label}}
+      </view>
+    </view>
+  </scroll-view>
+  <van-empty description="还没有记录~">
+  <van-button round type="danger" class="bottom-button">
+    去逛逛
+  </van-button>
+</van-empty>
 </view>

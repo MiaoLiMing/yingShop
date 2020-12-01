@@ -32,5 +32,18 @@ Page({
                 title: "联系客服",
             },
         ],
+        tabList: [
+            { value: 1, label: "猜你喜欢" },
+            { value: 2, label: "我的收藏" },
+            { value: 2, label: "最近浏览" },
+        ],
+        TabCur: 0,
+        scrollLeft: 0,
+    },
+    tabSelect(e) {
+        this.setData({
+            TabCur: e.currentTarget.dataset.id,
+            scrollLeft: (e.currentTarget.dataset.id - 1) * 60,
+        })
     },
 })

@@ -1,4 +1,11 @@
-.header {
+view {
+    box-sizing: inherit;
+}
+.users {
+    background-color: #fff;
+    font-size: 30rpx;
+}
+.top_header {
     background-color: #212121;
     width: 92%;
     height: 39vw;
@@ -8,14 +15,14 @@
     justify-content: center;
     position: relative;
 }
-.header .img_ld {
+.top_header .img_ld {
     position: absolute;
     right: 20rpx;
     top: 20rpx;
     width: 50rpx;
     height: 50rpx;
 }
-.header .userinfo {
+.top_header .userinfo {
     width: 90%;
     display: flex;
     color: #fff;
@@ -24,22 +31,22 @@
     flex-direction: column;
     margin-top: 52px;
 }
-.header .setting image {
+.top_header .setting image {
     width: 100%;
     height: 100%;
 }
 
-.header .userinfo .face {
+.top_header .userinfo .face {
     flex-shrink: 0;
     width: 15vw;
     height: 15vw;
 }
-.header .userinfo .face image {
+.top_header .userinfo .face image {
     width: 100%;
     height: 100%;
     border-radius: 100%;
 }
-.header .userinfo .info {
+.top_header .userinfo .info {
     display: flex;
     flex-flow: wrap;
     padding-top: 20px;
@@ -102,7 +109,7 @@
     width: 100%;
 }
 .img2 {
-    height: 35px;
+    height: 45px;
     width: 96%;
     margin: 10rpx 16rpx;
 }
@@ -145,4 +152,12 @@
     font-size: 28rpx;
     font-weight: 400;
     margin-top: 20rpx;
+}
+.bottom-button button {
+    width: 100px;
+    height: 32px;
+    border-radius: 0;
+    background-color: #000;
+    color: #fff;
+    border: none;
 }
